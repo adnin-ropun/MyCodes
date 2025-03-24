@@ -1,3 +1,5 @@
+// https://atcoder.jp/contests/abc206/tasks/abc206_c
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -28,8 +30,6 @@ template<typename T> istream &operator>>(istream &is, vector<T> &v){ for (auto &
 template<typename T> ostream &operator<<(ostream &os, vector<T> &v){ for(int i = 0; i < v.size(); i++) { cout << v[i]; if(i != v.size() - 1) cout << " "; }; return os; }
 template<typename T> void Out(T x) { cout << x << endl; }
 template<typename T1, typename T2> void Ans(bool f, T1 y, T2 n) { if(f) Out(y); else Out(n); }
-
-// filename = (Get-Item .).Name; datetime = Get-Date -Format "MM/dd/yyyy hh:mm tt"; git add filename; git commit -m "Pushed filename on datetime"; git push origin main
 
 signed main(){
 	int n;cin>>n;
