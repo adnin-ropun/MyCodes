@@ -46,14 +46,8 @@ using PPi = pair<Pii, int>;
 using bools = vector<bool>;
 using pairs = vector<Pii>;
 
-//int dx[4] = {1,0,-1,0};
-//int dy[4] = {0,1,0,-1};
-//char d[4] = {'D','R','U','L'};
 
 const int mod = 1000000007;
-//const int mod = 998244353;
-//#define Add(x, y) x = (x + (y)) % mod
-//#define Mult(x, y) x = (x * (y)) % mod
 
 signed main(){
 	int m,n;cin>>m>>n;
