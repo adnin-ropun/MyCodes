@@ -1,3 +1,5 @@
+// https://atcoder.jp/contests/abc209/tasks/abc209_c
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -23,24 +25,23 @@ struct fast_ios { fast_ios(){ cin.tie(0); ios::sync_with_stdio(false); cout << f
 #define s second
 #define int long long
 #define INF 1000000000000000000
+const int mod = 1000000007;
 
 template<typename T> istream &operator>>(istream &is, vector<T> &v){ for (auto &x : v) is >> x; return is; }
 template<typename T> ostream &operator<<(ostream &os, vector<T> &v){ for(int i = 0; i < v.size(); i++) { cout << v[i]; if(i != v.size() - 1) cout << " "; }; return os; }
 template<typename T> void Out(T x) { cout << x << endl; }
 template<typename T1, typename T2> void Ans(bool f, T1 y, T2 n) { if(f) Out(y); else Out(n); }
+#define mul(x, y) x = (x * (y)) % mod
 
 // filename = (Get-Item .).Name; datetime = Get-Date -Format "MM/dd/yyyy hh:mm tt"; git add filename; git commit -m "Pushed filename on datetime"; git push origin main
 
 signed main(){
-	int n;cin>>n;
-	unordered_map<int,int>mp;
+    int n;cin>>n;vector<int> arr(n);
+	cin>>arr;
+	Sort(arr);
+	int res=1;
 	REP(i,n){
-		int d;cin>>d;
-		mp[d]++;
+		res=mul(res,arr[i]-i);
 	}
-	int s=(n*(n-1))/2;
-	for(auto i:mp){
-		s-=(i.s*(i.s-1))/2;
-	}
-	cout<<s<<endl;
+	cout<<res<<endl;
 }
