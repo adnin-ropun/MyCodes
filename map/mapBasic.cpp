@@ -9,8 +9,12 @@ int main(){
     //     mp[s]=n;
     // }
     // // mp.erase("pizza");
-    // if(mp.count("pizza")==1){cout<<"Found and prize: "<<mp["pizza"]<<"$"<<endl;}
+    // if(mp.count("pizza")!=0){cout<<"Found and prize: "<<mp["pizza"]<<"$"<<endl;}
     // else cout<<"Not found"<<endl;
+
+    // // using find()
+    // // if(mp.find("pizza")!=mp.end()){cout<<"Found and prize: "<<mp["pizza"]<<"$"<<endl;}
+    // // else cout<<"Not found"<<endl;
 
     // cout<<"List: "<<endl;
     // for(pair<string,int> it:mp){
