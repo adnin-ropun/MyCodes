@@ -28,6 +28,59 @@ public:
         }
     }
 
+    void bfs(int source,bool dest=-1){
+        queue<int> q;
+        bool* visited=new bool[V]{0};
+        int* dist=new int[V]{0};
+        int* parent=new int[V];
+
+        q.push(source);
+        visited[source]=true;
+
+        while(!q.empty()){
+
+            int f=q.front();
+            cout<<f<<endl;
+            q.pop();
+
+            for(auto nbr:l[f]){
+                if(!visited[nbr]){
+                    q.push(nbr);
+
+                    parent[nbr]=f;
+                    dist[nbr]=dist[f]+1;
+
+                    visited[nbr]=true;
+                }
+            }
+
+        }
+        for(int i=0;i<V;i++){
+            cout<<"Shortest dist to "<<i<<" is "<<dist[i]<<endl;
+        }
+        if(dest!=-1){
+            int temp=dest;
+            while(temp!=source){
+                cout<<temp<<" -- ";
+                temp=parent[temp];
+            }
+            cout<<source<<endl;
+        }
+    }
+    void dfsHelper(int node, bool *visited){
+        visited[node]=true;
+        cout<<node<<",";
+
+        for(int nbr:l[node]){
+            if(!visited[nbr])
+            dfsHelper(nbr,visited);
+        }
+    }
+    void dfs(int source){
+        bool* visited=new bool[V]{0};
+        dfsHelper(source,visited);
+    }
+
 };
 
 class Node{
@@ -85,6 +138,8 @@ int main(){
     g.addEdge(2,4);
 
     g.printAdjList();
+    g.bfs(1,4);
+    g.dfs(1);
 
     // vector<string>cities={"dhaka","sylhet","comilla","feni","chitagong"};
     // graph g(cities);
