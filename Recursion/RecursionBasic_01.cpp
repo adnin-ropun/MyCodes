@@ -42,12 +42,25 @@ void r_3(int n, vector<int>& v) {
 }
 
 
-    
+int r_4(int n) {
+    if (n == 0) return 0;  // Base case
+
+    cout << "Going deeper -> " << n << endl;
+    int result = n + r_4(n - 1); // Return value from deeper step
+    cout << "Returning -> " << result << endl;
+
+    return result; // Return accumulated sum
+}
+
+int r_5(int n) {
+    if (n == 0) return 0;  // Base case
+    return n + r_5(n - 1); // Directly returning recursive call
+}
 
 
 int main(){
 
-	r_1(5);
+	// r_1(5);
 	// vector<int> v;
     // r_2(3, v);
 
@@ -58,5 +71,7 @@ int main(){
     // for (int num : v) cout << num << " ";
     // cout << endl;
 
+    // r_4(5);
+    cout<<r_5(5);
 
 }
