@@ -47,16 +47,16 @@ void r_3(int n, vector<int>& v) {
 
 int main(){
 
-	// r_1(5);
-	vector<int> v;
+	r_1(5);
+	// vector<int> v;
     // r_2(3, v);
 
-    r_3(9, v); // Start recursion
+    // r_3(9, v); // Start recursion
 
     // Print final vector
-    cout << "Final modified vector: ";
-    for (int num : v) cout << num << " ";
-    cout << endl;
+    // cout << "Final modified vector: ";
+    // for (int num : v) cout << num << " ";
+    // cout << endl;
 
 
 }
