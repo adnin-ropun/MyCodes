@@ -55,6 +55,7 @@ int r_4(int n) {
 int r_5(int n) {
     if (n == 0) return 0;  // Base case
     return n + r_5(n - 1); // Directly returning recursive call
+    // here in returning step, we have to check what func wants for coresponding n
 }
 
 
