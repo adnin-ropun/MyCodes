@@ -27,7 +27,5 @@ int main(){
 
 	// cout<<fibo(10);
 	cout<<fact(7);
-
-	vector
 	
 }
